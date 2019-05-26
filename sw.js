@@ -14,6 +14,10 @@ self.addEventListener('install', function(event) {
           '/src/images/rock.png',
           '/src/images/scissor-btn.png',
           '/src/images/scissor.png',
+          '/src/images/icons-192.jpg',
+          '/src/images/icons-512.png',
+          '/src/images/bg.png',
+          '/favicon.ico',
           '/bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css',
           '/bootstrap/bootstrap-4.3.1-dist/js/bootstrap.min.js'
         // etc
