@@ -176,9 +176,12 @@
 </head>
 
 <body onload="load()">
-	<?php
-		include 'navbar.php';
-	?>
+	<div id='cssmenu'>
+	<ul>
+	   <li><a href='index.html'><span>Home</span></a></li>
+	   <li><a href='highscore.html'><span>High Score</span></a></li>
+	</ul>
+	</div>
 	<h1 class="title">ROCK PAPER SCISSORS</h1>
 	<div class="container" id="nickname_form">
 		<input type="text" id="nick" placeholder="nickname">
@@ -363,7 +366,7 @@
 		$("#stop").on("click",function() {
 			var score =  parseInt($('#win-score').text());
 			localStorage.setItem("score",score);
-			$(location).attr('href','highscore.php');
+			$(location).attr('href','highscore.html');
 			/*
 			$('.flex-container').css('display','none');
 			$('#nickname_form').css('display','none');

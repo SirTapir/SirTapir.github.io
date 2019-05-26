@@ -2,9 +2,8 @@ self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('first-app').then(function(cache) {
       return cache.addAll([
-          '/index.php',
-          '/navbar.php',
-          '/highscore.php',
+          '/index.html',
+          '/highscore.html',
           '/src/css/styles.css',
           '/src/js/script.js',
           '/src/js/app.js',
