@@ -4,6 +4,7 @@ self.addEventListener('install', function(event) {
       return cache.addAll([
           '/index.html',
           '/highscore.html',
+          '/offline.html',
           '/src/js/app.js',
           '/manifest.json',
           '/src/images/paper-btn.png',
@@ -32,6 +33,12 @@ self.addEventListener('fetch', function(event) {
     caches.match(event.request).then(function(response) {
       // Fall back to network
       return response || fetch(event.request);
+    }).catch(function() {
+      // If both fail, show a generic fallback:
+      return caches.match('/offline.html');
+      // However, in reality you'd have many different
+      // fallbacks, depending on URL & headers.
+      // Eg, a fallback silhouette image for avatars.
     })
   );
 });
